@@ -1,7 +1,11 @@
 <template>
-  <div class="home">
-    home
-  </div>
+  <el-container>
+    <el-aside></el-aside>
+    <el-container>
+      <el-header>头部内容</el-header>
+      <el-main>中间区域</el-main>
+    </el-container>
+  </el-container>
 </template>
 
 <script>
