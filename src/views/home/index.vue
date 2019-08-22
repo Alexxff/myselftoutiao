@@ -5,7 +5,9 @@
       <layout-aside></layout-aside>
     </el-aside>
     <el-container>
-      <el-header>头部内容</el-header>
+      <el-header>
+        <layout-header></layout-header>
+      </el-header>
       <el-main>中间区域</el-main>
     </el-container>
   </el-container>
@@ -14,10 +16,13 @@
 <script>
 // @ is an alias to /src
 import layoutAside from '../../components/home/layout-aside'
+import layoutHeader from '../../components/home/layout-header'
 export default {
   name: 'home',
   components: {
-    'layout-aside': layoutAside
+    'layout-aside': layoutAside,
+    'layout-header': layoutHeader
+
   }
 }
 </script>
