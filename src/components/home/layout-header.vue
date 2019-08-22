@@ -7,15 +7,15 @@
   <el-col class="layout-right" :span="3">
     <!-- <img src="../../assets/img/avatar.jpg" alt=""> -->
     <img :src="user.photo?user.photo:defaultImg" alt="">
-    <el-dropdown trigger="click">
+    <el-dropdown trigger="click" @command="commandAction">
         <span class="el-dropdown-link">
           我我我
           <i class="el-icon-arrow-down el-icon--right"></i>
         </span>
         <el-dropdown-menu slot="dropdown">
-          <el-dropdown-item>个人信息</el-dropdown-item>
-          <el-dropdown-item>git地址</el-dropdown-item>
-          <el-dropdown-item>退出</el-dropdown-item>
+          <el-dropdown-item command="account">个人信息</el-dropdown-item>
+          <el-dropdown-item command="git">git地址</el-dropdown-item>
+          <el-dropdown-item commond="out">退出</el-dropdown-item>
         </el-dropdown-menu>
     </el-dropdown>
   </el-col>
@@ -41,6 +41,16 @@ export default {
       }).then(result => {
         this.user = result.data.data
       })
+    },
+    commandAction (command) {
+      if (command === 'account') {
+
+      } else if (command === 'git') {
+        window.location.href = 'https://github.com/Alexxff/myselftoutiao'
+      } else {
+        window.localStorage.clear()
+        this.$router.push('/login')
+      }
     }
   },
   created () {
