@@ -63,7 +63,7 @@ export default {
             url: '/authorizations',
             data: this.formData
           }).then(result => {
-            window.localStorage.setItem('user-info', JSON.stringify(result.data.data))
+            window.localStorage.setItem('user-info', JSON.stringify(result.data))
             this.$router.push('/home')
           }).catch(() => {
             this.$message({

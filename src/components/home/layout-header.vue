@@ -39,7 +39,7 @@ export default {
         url: './user/profile'
         // headers: { 'Authorization': `Bearer ${token}` }
       }).then(result => {
-        this.user = result.data.data
+        this.user = result.data
       })
     },
     commandAction (command) {
