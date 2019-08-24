@@ -41,6 +41,6 @@ axios.interceptors.response.use(function (response) {
       break
   }
   Message({ message, type: 'waring' })
-  return new Promise()
+  return new Promise(function () {})
 })
 export default axios
