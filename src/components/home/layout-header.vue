@@ -33,11 +33,11 @@ export default {
   },
   methods: {
     getUserInfo () {
-      let userInfo = window.localStorage.getItem('user-info')
-      let token = userInfo ? JSON.parse(userInfo).token : null
-      token && this.$axios({
-        url: './user/profile',
-        headers: { 'Authorization': `Bearer ${token}` }
+      // let userInfo = window.localStorage.getItem('user-info')
+      // let token = userInfo ? JSON.parse(userInfo).token : null
+      this.$axios({
+        url: './user/profile'
+        // headers: { 'Authorization': `Bearer ${token}` }
       }).then(result => {
         this.user = result.data.data
       })
