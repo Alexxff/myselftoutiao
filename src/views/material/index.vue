@@ -1,5 +1,5 @@
 <template>
-  <el-card></el-card>
+  <el-card> 素材管理</el-card>
 </template>
 
 <script>
